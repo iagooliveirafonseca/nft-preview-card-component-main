@@ -6,10 +6,14 @@
 
 :root{
     font-size: 62.5%;
+    --Cyan:hsl(178, 100%, 50%);
     --Very_Dark_Blue_Main_BG: hsl(217, 54%, 11%);
     --Very_Dark_Blue_Card_BG: hsl(216, 50%, 16%);
     --Very_Dark_Blue_Line:hsl(215, 32%, 27%);
     --White: hsl(0, 0%, 100%);
+    
+    /*=========FONTS======*/
+    /* font-family: "Outfit", sans-serif;*/
 }
 
 
@@ -21,7 +25,7 @@ body{
 
 .wrapper{
     width: min(37.5rem, 90%);
-    height: 45rem;
+    height: 90rem;
     margin: auto;
     display: flex;
     justify-content: center;
@@ -32,9 +36,10 @@ body{
 
 /*====================CARD==================*/
 #card{
-    border-radius: 1rem;
-    width: 18rem;
-    height: 30rem;
+    padding-top: 1rem;
+    border-radius: 1.5rem;
+    width: 30rem;
+    height: 50rem;
     background-color: var(--Very_Dark_Blue_Card_BG);
 }
 
@@ -45,10 +50,66 @@ body{
     display: block;
     margin-top: 1rem;
     margin-inline: auto;
-    border-radius: 0.5rem;
+    border-radius: 1rem;
 
 }
 
-/*====================CARD-IMAGE==================*/
+/*====================CARD-CONTENT==================*/
+
+#card .card-content{
+    width: 85%;
+    margin: auto;
+}
+
+/*====================CARD-CONTENT==================*/
+
+.card-content .text-content h3{
+    margin-block: 2rem;
+    font-size: 2rem;
+    color: var(--White);
+    font-family: "Outfit", sans-serif;
+    font-weight: 600;
+}
+
+.card-content .text-content h3:hover{
+    color: var(--Cyan);
+    cursor: default;
+}
+
+.card-content .text-content p{
+    font-size: 1.6rem;
+    color: var(--White);
+    opacity: 0.5;
+    
+}
 
 
+.card-content .value-term{
+display: flex;
+justify-content: space-between;
+flex-direction: row;
+margin-top: 0.5rem;
+}
+
+.card-content .value-term div{
+    width: 9.5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.value-term div h4{
+    font-size: 1.6rem;
+    color: var(--Cyan);
+    font-family: "Outfit", sans-serif;
+    font-weight: 600;
+}
+
+.value-term div p{
+    font-size: 1.6rem;
+    color: var(--White);
+    font-family: "Outfit", sans-serif;
+    font-weight: 300;
+    opacity: 0.5;
+}
