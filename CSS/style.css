@@ -11,6 +11,7 @@
   --Very_Dark_Blue_Card_BG: hsl(216, 50%, 16%);
   --Very_Dark_Blue_Line: hsl(215, 32%, 27%);
   --White: hsl(0, 0%, 100%);
+  --Soft-Blue: hsl(215, 51%, 70%);
 
   /*=========FONTS======*/
   /* font-family: "Outfit", sans-serif;*/
@@ -41,8 +42,8 @@ body {
 }
 
 /*====================CARD-IMAGE==================*/
-#card .card-image{
-    position: relative;;
+#card .card-image {
+  position: relative;
 }
 #card .card-image img {
   width: 85%;
@@ -52,38 +53,31 @@ body {
   border-radius: 1rem;
 }
 
-
-#card .card-image .above{
-
-    position: absolute;
-    top: 0;
-    right:22px;
-    width: 25.5rem;
-    height: 25.5rem;
-    border-radius: 1rem;
-    
+#card .card-image .above {
+  position: absolute;
+  top: 0;
+  right: 22px;
+  width: 25.5rem;
+  height: 25.5rem;
+  border-radius: 1rem;
 }
 
- #card .card-image .above:hover{
-    background-color:var(--Cyan);
-    opacity: 0.5;
-} 
+#card .card-image .above:hover {
+  background-color: var(--Cyan);
+  opacity: 0.5;
+}
 
-#card .card-image .eye{
-    visibility: block;
-    position: absolute;
+#card .card-image .eye {
+  visibility: block;
+  position: absolute;
+  width: 2rem;
+  top: 90px;
+  left: 125px;
+  width: 5rem;
+}
 
-    width: 2rem;
-    top: 90px;
-    left:125px;
-    width: 5rem;
-    border-radius: 1rem;
-    z-index: 2;
-   
-} 
-
-#card .card-image .eye:hover{
-    visibility: visible;
+#card .card-image .eye:hover {
+  visibility: visible;
 }
 
 /* #card .card-image .show-image{
@@ -92,8 +86,6 @@ body {
 #card .card-image .not-show-image{
     display: none;
 } */
-
-
 
 /*====================CARD-CONTENT==================*/
 
@@ -119,8 +111,8 @@ body {
 
 .card-content .text-content p {
   font-size: 1.6rem;
-  color: var(--White);
-  opacity: 0.5;
+  color: var(--Soft-Blue);
+  opacity: 0.7;
 }
 
 .card-content .value-term {
@@ -147,10 +139,10 @@ body {
 
 .value-term div p {
   font-size: 1.6rem;
-  color: var(--White);
+  color: var(--Soft-Blue);
   font-family: "Outfit", sans-serif;
   font-weight: 300;
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 .card-content hr {
@@ -178,8 +170,8 @@ body {
 
 .card-content .card-footer p {
   font-size: 1.6rem;
-  color: var(--White);
-  opacity: 0.5;
+  color: var(--Soft-Blue);
+  opacity: 0.7;
   margin-top: 2rem;
   margin-left: 0.5rem;
   font-family: "Outfit", sans-serif;
@@ -194,4 +186,97 @@ body {
 .card-content .card-footer .profile_of_creator:hover {
   color: var(--Cyan);
   cursor: pointer;
+}
+
+/*====================MEDIA-QUERY-DESKTOP/TABLET==================*/
+
+@media (min-width: 768px) {
+  /*====================WRAPPER==================*/
+  .wrapper {
+    width: min(76.8rem, 90%);
+    height: 93rem;
+  }
+
+  /*====================CARD==================*/
+  #card {
+    padding-top: 2rem;
+    border-radius: 1.5rem;
+    width: 50rem;
+    height: 80rem;
+    background-color: var(--Very_Dark_Blue_Card_BG);
+  }
+
+  /*====================CARD-IMAGE==================*/
+
+  #card .card-image .above {
+    top: 0;
+    right: 39px;
+    width: 42.5rem;
+    height: 42.5rem;
+  }
+
+  #card .card-image .eye {
+    width: 7rem;
+    top: 160px;
+    left: 215px;
+  }
+
+  /*====================CARD-CONTENT==================*/
+
+  .card-content .text-content h3 {
+    font-size: 3rem;
+    margin-block: 3rem;
+  }
+
+  .card-content .text-content p {
+    font-size: 2.5rem;
+  }
+
+  .card-content .value-term {
+    margin-top: 1rem;
+  }
+
+  .card-content .value-term div {
+    width: 12rem;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .value-term div h4 {
+    font-size: 2.2rem;
+    color: var(--Cyan);
+    font-family: "Outfit", sans-serif;
+    font-weight: 600;
+  }
+
+  .value-term div p {
+    font-size: 2.2rem;
+  }
+
+  .card-content hr {
+    width: 100%;
+    height: 0.3rem;
+    background-color: var(--Very_Dark_Blue_Line);
+    border: 0.1rem;
+    margin-top: 1rem;
+  }
+
+  /*====================CARD-FOOTER==================*/
+
+
+  
+  .card-content .card-footer img {
+    margin-top: 3rem;
+    width: 6rem;
+  }
+  
+  .card-content .card-footer p {
+    font-size: 2.2rem;
+    margin-top: 2rem;
+    margin-left: 1rem;
+ 
+  }
+  
+
 }
